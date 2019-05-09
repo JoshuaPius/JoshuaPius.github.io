@@ -1,0 +1,63 @@
+<?php
+$path = "/home1/dsp/html/nectar/";
+$site_path = "/nectar/";
+
+if($_SERVER['SERVER_NAME']=="nectar") {
+	$path = "D:/Data/_school/nectar/dsp_nectar_web/web/";
+	$site_path = "/";
+}
+
+
+$current_section = "publications";
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Nectar Theme 3 - Multimedia Laboratory</title>
+<link href="<?php echo($site_path); ?>styles/layout.css" rel="stylesheet" type="text/css" />
+<link href="<?php echo($site_path); ?>styles/presentation.css" rel="stylesheet" type="text/css" />
+<?php include($path . "include/parse_css.php"); ?>
+</head>
+<body>
+<div id="main_container">
+<?php include($path . "include/header.php"); ?>
+<?php include($path . "include/menu.php"); ?>
+  <div id="col_container" align="left">
+    <div id="left_col" class="column">
+      <p class="cat_head_first">:: Publications </p>
+	  <p class="note">The following are Multimedia Lab publications based on NECTAR-supported research.</p>
+	  <p class="proj_listtitle">Journals and Conferences </p>
+	  <ul class="pub_list">
+		<li>M. Ajmal, A. Kushki, K.N. Plataniotis, &quot;Time-Compression of Speech in Informational Talks using Spectral Entropy,&quot; to appear in proceedings of <em>Eighth International Workshop on Image Analysis for Multimedia Interactive Services (WIAMIS)</em>, 2007.</li>
+		<li>M. Almaoui, A. Kushki, K.N. Plataniotis, &quot;Metadata Driven
+		  Multimedia Transcoding for Distance Learning,&quot; <em>Springer/ACM Multimedia Systems Journal</em>, vol. 12, no. 6, pp. 505-520, 2007.</li>
+		<li>K. Martin, R. Lukac, K.N. Plataniotis, &quot;SPIHT-based Coding of the Shape and Texture of Arbitrarily-Shaped Visual Objects,&quot; <em>IEEE Transactions on Circuits and Systems for Video Technology</em>, vol. 16, no. 10, pp. 1196-1208,  2006.</li>
+		<li>K. Martin, R. Lukac, K.N. Plataniotis, &quot;Efficient Encryption Of Compressed Color Images,&quot; in proceedings of <em>IEEE International Symposium on Industrial Electronics - ISIE 2005</em>, June 2005.</li>
+		<li>K. Martin, R. Lukac, K.N. Plataniotis, &quot;Efficient Encryption of Wavelet-Based Coded Color Images,&quot; <em>Pattern Recognition</em>, vol. 38, no. 7, pp. 1111-1115, July 2005.</li>
+		<li>M. Almaoui, A. Kushki, K. N. Plataniotis, &quot;Adaptive Multimedia  Transcoding Using Cached XSLT Instances&quot;, in proceedings of <em>22nd  Biennial Symposium on Communications</em>, 2004.</li>
+      </ul>
+	  <p><span class="proj_listtitle">Theses</span></p>
+	  <ul class="pub_list">
+	    <li><a href="../projects/summarization/majmal_thesis.pdf">M. Ajmal, &quot;Universal Multimedia Access and 
+      Semantic Summarization for Presentations,&quot; <em>M.A.Sc. thesis</em>, University of Toronto, 2007</a></li>
+        <li><a href="../projects/uma/Almaoui_MASC05.pdf">M. Almaoui, &quot;Metadata Driven Multimedia
+          Transcoding,&quot; <em>M.A.Sc. thesis</em>, University of Toronto, 2005.</a></li>
+	  </ul>
+	  <p><span class="proj_listtitle">Technical Reports</span></p>
+	  <ul class="pub_list">
+	    <li><a href="../projects/isa/slide_adaptation_progress_report.pdf">V. Singh, &quot;Interactive Presentation Slide Adaptation,&quot; Technical Progress Report, Multimedia Laboratory, June 2007.</a></li>
+	    <li><a href="../projects/ssms/nectar-slide_adaptation.pdf">K. Martin and C. Guo, &quot;Secure, XML-Based Presentation Slide Adaptation for
+	      Universal Access,&quot; Technical Report, Multimedia Laboratory, November 2006.</a></li>
+	    <li><a href="../projects/uma/uma_documentation.pdf">M. Almaoui, S. Liao,  and S. Gueorguiev, &quot;UMA System Implementation Report,&quot; Technical Report,  Multimedia Laboratory, December 2005.</a></li>
+	    <li><a href="../projects/ssms/ssms_framerate_doc.pdf">C. Guo and K. Martin, &quot;SSMS MPEG-4 Framerate Scaling System Implementation Report,&quot; Technical Report, Multimedia Laboratory, April 2006.</a></li>
+        <li><a href="http://www.dsp.utoronto.ca/~kmartin/nectar/stspiht_nectar_techreport.pdf">K. Martin, R. Lukac, K.N. Plataniotis, &quot;SPIHT-based Coding of the Shape and Texture of Arbitrarily-Shaped Visual Objects,&quot; Technical Report, February 2006. </a></li>
+	  </ul>
+	  <br />
+    </div>
+<?php include($path . "include/right_col.php"); ?>    
+<?php include($path . "include/footer.php"); ?>    
+  </div>
+</div>
+</body>
+</html>
