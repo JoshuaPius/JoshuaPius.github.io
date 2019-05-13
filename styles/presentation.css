@@ -180,27 +180,35 @@ ul.proj_description li {
 	margin:0px;
 	padding:10px 10px 0;
 	list-style:none;
+
 }
-#menu li {
+#menu ul li {
 	float:left;
 	margin:0px;
 	padding:0px;
-	background:url("/nectar/images/inactive_right_tab.gif")
+
       no-repeat right top;
+
+background-image: url("inactive_right_tab.jpg")
+
+
 }
-#menu a {
+#menu  ul li a {
+
 	display:block;
-	background:url("/nectar/images/inactive_left_tab.gif")
+	background:url("inactive_left_tab.gif")
       no-repeat left top;
     padding:6px 18px 4px 10px;
 	font-weight:bold;
 	color:#667799;
+
+
 }
 #menu #current_section {
-    background-image:url("/nectar/images/active_right_tab.gif");
+    background:url("active_right_tab.gif")
 }
-#menu #current_section a {
-    background-image:url("/nectar/images/active_left_tab.gif");
+#menu  #current_section a {
+background:url("active_left_tab.gif")
 	color:#FFFFFF;
 }
 .note {

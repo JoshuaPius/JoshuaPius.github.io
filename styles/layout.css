@@ -10,7 +10,7 @@
 	padding:16px 10px 10px;
 	font-family:Georgia, "Times New Roman", Times, serif;
 	/*background-color:#F7F7FA;*/
-	background:url("/nectar/images/title_back.gif")
+	background-image: url("title_back.gif")
       repeat-x left top;
 }
 #col_container {
