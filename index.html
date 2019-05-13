@@ -17,12 +17,47 @@ $current_section = "home";
 <title>Nectar Theme 3 - Multimedia Laboratory</title>
 <link href="styles/layout.css" rel="stylesheet" type="text/css" />
 <link href="styles/presentation.css" rel="stylesheet" type="text/css" />
-<?php include($path . "include/parse_css.php"); ?>
+<?php include($path . "include/parse_css.html"); ?>
+
+<script>
+function includeHTML() {
+  var z, i, elmnt, file, xhttp;
+  /*loop through a collection of all HTML elements:*/
+  z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+    elmnt = z[i];
+    /*search for elements with a certain atrribute:*/
+    file = elmnt.getAttribute("w3-include-html");
+    if (file) {
+      /*make an HTTP request using the attribute value as the file name:*/
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          /*remove the attribute, and call this function once more:*/
+          elmnt.removeAttribute("w3-include-html");
+          includeHTML();
+        }
+      }      
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      /*exit the function:*/
+      return;
+    }
+  }
+};
+</script>
+
 </head>
 <body>
+
 <div id="main_container">
-<?php include($path . "include/header.php"); ?>
-<?php include($path . "include/menu.php"); ?>
+<?php include($path . "include/header.html"); ?>
+<?php include("include/menu.html"); ?>
+<div w3-include-html="include/header.html"></div> 
+<div w3-include-html="include/menu.html"></div> 
+<script type="text/html" src="include/menu.html"></script>
   <div id="col_container" align="left">
     <div id="left_col" class="column">
       <p class="cat_head_first">:: Latest News</p>
@@ -46,9 +81,14 @@ Content scaling is performed by a transcoding operation which requires direct ac
       <p class="proj_listtitle">Shape-Adaptive Image Coding</p>
       <p class="proj_abstract">A codec for compressing arbitrarily-shaped still visual objects in support of application-driven transcoding.</p>
     </div>
-    <?php include($path . "include/right_col.php"); ?>    
-<?php include($path . "include/footer.php"); ?>    
+	<div w3-include-html="include/right_col.html"></div> 
+	<div w3-include-html="include/footer.html"></div> 
+    <?php include("include/right_col.html"); ?>    
+<?php include("include/footer.html"); ?>    
   </div>
 </div>
+<script>
+includeHTML();
+</script>
 </body>
 </html>
